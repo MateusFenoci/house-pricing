@@ -18,6 +18,7 @@ O projeto utiliza técnicas de aprendizado de máquina para prever os preços da
 
 
 - `house_pricing.py`: Script principal que contém todo o código para o fluxo de trabalho descrito acima.
+- `requiremets.txt`: Arquivo com todas bibliotecas utilizadas e suas respectivas versões.
 - `train.csv`: Conjunto de dados de treinamento fornecido pela competição (não incluído no repositório).
 - `test.csv`: Conjunto de dados de teste fornecido pela competição (não incluído no repositório).
 - `submission.csv`: Arquivo de submissão gerado após a execução do script (não incluído no repositório).

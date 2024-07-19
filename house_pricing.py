@@ -13,8 +13,8 @@ from scipy.stats import skew
 train_data = pd.read_csv('train.csv', sep=',')
 test_data = pd.read_csv('test.csv', sep=',')
 
-##print(train_data.head())
-##print(train_data.info())
+print(train_data.head())
+print(train_data.info())
 
 def show_missing_values(train_data, test_data):
     """ Recebe as databases e printa os valores nulos de cada uma. """
@@ -29,7 +29,7 @@ def show_missing_values(train_data, test_data):
     print(missin_test)
 
 
-##show_missing_values(train_data, test_data)
+show_missing_values(train_data, test_data)
 
 
 numeric_cols = train_data.select_dtypes(include=[np.number]).columns
@@ -47,7 +47,7 @@ train_data[categorical_cols] = imputer.fit_transform(train_data[categorical_cols
 test_data[categorical_cols] = imputer.transform(test_data[categorical_cols])
 
 ## Checando se ainda temos valores nulos
-##show_missing_values(train_data, test_data)
+show_missing_values(train_data, test_data)
 
 
 ## Transformando variáveis categoricas em númericas
@@ -88,7 +88,7 @@ model.fit(X, y)
 ## Avaliando o modelo
 scores = cross_val_score(model, X, y, scoring='neg_mean_squared_error', cv=10)
 rmse_scores = np.sqrt(-scores)
-##print(f"Mean RMSE: {rmse_scores.mean()}")
+print(f"Mean RMSE: {rmse_scores.mean()}")
 
 ## Fazendo previsões
 predictions = model.predict(test_data_scaled)
