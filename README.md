@@ -62,6 +62,9 @@ python house_pricing.py
 
 4. O arquivo `submission.csv` será gerado na raiz do repositório, pronto para ser submetido no Kaggle.
 
+## Referências
+- [Dataset do House Pricing](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+
 ## Autor
 
 Mateus Fenoci
