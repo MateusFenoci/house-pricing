@@ -10,8 +10,8 @@ from sklearn.metrics import mean_squared_error
 from scipy.stats import skew
 
 
-train_data = pd.read_csv('data/train.csv', sep=',')
-test_data = pd.read_csv('data/test.csv', sep=',')
+train_data = pd.read_csv('train.csv', sep=',')
+test_data = pd.read_csv('test.csv', sep=',')
 
 ##print(train_data.head())
 ##print(train_data.info())
