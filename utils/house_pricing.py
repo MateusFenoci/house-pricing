@@ -1,3 +1,4 @@
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,8 +11,8 @@ from sklearn.metrics import mean_squared_error
 from scipy.stats import skew
 
 
-train_data = pd.read_csv('train.csv', sep=',')
-test_data = pd.read_csv('test.csv', sep=',')
+train_data = pd.read_csv('data/train.csv', sep=',')
+test_data = pd.read_csv('data/test.csv', sep=',')
 
 print(train_data.head())
 print(train_data.info())
@@ -80,6 +81,8 @@ y = train_data['SalePrice']
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 test_data_scaled = scaler.transform(test_data.drop('Id', axis=1))
+
+
 
 ## Treinando o modelo
 model = RandomForestRegressor(n_estimators=100, random_state=42)
